@@ -32,6 +32,7 @@ namespace ASC_AutomatDeVanzari
             {
                 HistoryTextBox.Text += "Produs eliberat, 2 monede Dime rest\r\n";
                 cents %= 20;
+                RefreshCentsLabel(CentsLabel);
             }
             else 
             { 
@@ -64,6 +65,11 @@ namespace ASC_AutomatDeVanzari
         private static void RefreshCentsLabel(Label centsLabel)
         {
             centsLabel.Text = $"Cents: {cents}";
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
